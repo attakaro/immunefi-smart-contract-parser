@@ -1,5 +1,4 @@
-Immunefi smart contract parser that parses the solidity source code of smart contracts of immunefi bug bounty projects.\
-It can also parse a single contract by direct url.
+Immunefi smart contract parser that parses the solidity source code of smart contracts of immunefi bug bounty projects.
 
 Add your api keys to "keys.json" file manually:
 
