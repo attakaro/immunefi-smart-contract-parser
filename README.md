@@ -17,8 +17,7 @@ Or use:
 
 **All urls must start with https://**.
 
-**The chain name must be a substring of the smart contract url, e.g. "etherscan" name, "https://etherscan.io/0xFFFFFFF" url**.
-
+**The chain name must be a substring of the smart contract url, e.g. "etherscan" name, "https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7" url**.
 
 Parse single contract using direct url:
 
