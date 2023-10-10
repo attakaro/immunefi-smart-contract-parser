@@ -119,7 +119,7 @@ impl Parser {
         let json: serde_json::Value = serde_json::from_str(&body)?;
         let (name, code) = (
             json["result"][0]["ContractName"].as_str()
-                .unwrap_or("couldn't convert SourceCode to string"),
+                .unwrap_or("couldn't convert ContractName to string"),
             json["result"][0]["SourceCode"].as_str()
                 .unwrap_or("couldn't convert SourceCode to string"));
         let data = ContractData {
