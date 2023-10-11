@@ -28,7 +28,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
                 .about("parse one smart contract using direct url")
                 .arg(
                     Arg::new("url")
-                        .help("smart contract direct url e.g. \"https://etherscan.io/0xFFFFFFFFFFFFFFFFFFFFFFFF\"")
+                        .help("smart contract direct url e.g. \"https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7\"")
                 )
         )
         .subcommand(
