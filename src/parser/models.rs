@@ -6,7 +6,7 @@ pub struct ContractData {
 
 pub enum ContractType {
     Splitted,
-    United
+    Merged
 }
 
 pub enum ParserMode {

@@ -147,7 +147,7 @@ impl Parser {
         if contract.code.starts_with('{') {
             ContractType::Splitted
         } else {
-            ContractType::United
+            ContractType::Merged
         }
     }
     
@@ -202,8 +202,8 @@ impl Parser {
                     None => eprintln!("Couldn't access \"sources\" field in returned JSON of contract \"{}\" {}", contract_data.name, contract_address)
                 } 
             },
-            ContractType::United => {
-                Parser::save_united_contract(&contract_data, mode, &contract_address).await?
+            ContractType::Merged => {
+                Parser::save_merged_contract(&contract_data, mode, &contract_address).await?
             }
         }
         Ok(())
@@ -248,7 +248,7 @@ impl Parser {
         Ok(())
     }
 
-    async fn save_united_contract(
+    async fn save_merged_contract(
         contract_data: &ContractData,
         mode: &ParserMode, 
         contract_address: &str,

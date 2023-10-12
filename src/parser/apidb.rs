@@ -96,18 +96,22 @@ mod tests {
 
         // add new api test
         db.add_new_api("test", "test_key", "test_api").await?;
+        db.read().await?;
         assert_eq!(db.db.get("test"), Some(&("test_key".to_owned(), "test_api".to_owned())));
 
         // change api key test
         db.change_api_key("test", "new_key").await?;
+        db.read().await?;
         assert_eq!(db.db.get("test").unwrap().0, "new_key".to_owned());
         
         // change api url test
         db.change_api_url("test", "new_api_url").await?;
+        db.read().await?;
         assert_eq!(db.db.get("test").unwrap().1, "new_api_url".to_owned());
 
         // remove api test
         db.remove_api("test").await?;
+        db.read().await?;
         assert_eq!(db.db.get("test"), None);
 
         Ok(())
