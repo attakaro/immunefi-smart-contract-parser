@@ -68,7 +68,7 @@ impl Parser {
             }
         }
 
-        // workaround because etherscan is a subsrting for both etherscan.io and optimistic.etherscan.io
+        // workaround because etherscan is a subsrting of both etherscan.io and optimistic.etherscan.io
         if url.contains("optimistic") {
             (key, api) = apis.db.get("optimistic").unwrap().to_owned();
         }
